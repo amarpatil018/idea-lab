@@ -2,138 +2,250 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean India Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean India Login</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
 
-    <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
 
-        body{
-            margin:0;
-            padding:0;
-            font-family:Segoe UI, sans-serif;
+body{
 
-            background:linear-gradient(
-            135deg,
-            #1b5e20,
-            #4caf50,
-            #a5d6a7
-            );
+height:100vh;
 
-            height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
-        }
+background:linear-gradient(
+135deg,
+#0f2027,
+#203a43,
+#2c5364
+);
 
-        .login-box{
+}
 
-            width:400px;
+.container{
 
-            background:white;
+width:90%;
+max-width:1200px;
 
-            padding:30px;
+display:flex;
 
-            border-radius:20px;
+background:white;
 
-            text-align:center;
+border-radius:25px;
 
-            box-shadow:0 10px 30px rgba(0,0,0,.2);
+overflow:hidden;
 
-        }
+box-shadow:0 15px 40px rgba(0,0,0,.3);
 
-        h1{
-            color:#0b5d1e;
-        }
+}
 
-        input,select{
+.welcome{
 
-            width:100%;
+flex:1;
 
-            padding:12px;
+padding:50px;
 
-            margin-top:10px;
+color:white;
 
-            border-radius:10px;
+background:linear-gradient(
+135deg,
+#1b5e20,
+#43a047,
+#81c784
+);
 
-            border:1px solid #ccc;
+}
 
-            box-sizing:border-box;
+.welcome h1{
 
-        }
+font-size:50px;
 
-        button{
+margin-bottom:10px;
 
-            width:100%;
+}
 
-            padding:12px;
+.welcome h2{
 
-            margin-top:15px;
+margin-bottom:20px;
 
-            background:#0b8f31;
+}
 
-            color:white;
+.welcome p{
 
-            border:none;
+line-height:1.8;
 
-            border-radius:10px;
+margin-bottom:20px;
 
-            font-size:16px;
+}
 
-            cursor:pointer;
+.feature{
 
-        }
+background:rgba(255,255,255,.2);
 
-        button:hover{
-            background:#087526;
-        }
+padding:15px;
 
-    </style>
+margin-top:10px;
+
+border-radius:10px;
+
+}
+
+.login-box{
+
+flex:1;
+
+padding:50px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.login-box h2{
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:#1b5e20;
+
+}
+
+input,
+select{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+}
+
+button{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+border-radius:10px;
+
+background:#1b5e20;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#2e7d32;
+
+}
+
+.credentials{
+
+margin-top:20px;
+
+padding:15px;
+
+background:#f5f5f5;
+
+border-radius:10px;
+
+font-size:13px;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="login-box">
+<div class="container">
 
-    <h1>♻ Clean India</h1>
+<div class="welcome">
 
-    <h3>Smart Waste Management System</h3>
+<h1>♻ Clean India</h1>
 
-    <input
-    type="text"
-    id="username"
-    placeholder="Enter Username">
+<h2>Smart Waste Management System</h2>
 
-    <input
-    type="password"
-    id="password"
-    placeholder="Enter Password">
+<p>
+Welcome to Clean India
+</p>
 
-    <select id="role">
+<p>
+Thank you for joining us.
+</p>
 
-        <option value="resident">
-            Resident
-        </option>
-
-        <option value="admin">
-            Admin
-        </option>
-
-        <option value="collector">
-            Collector
-        </option>
-
-    </select>
-
-    <button onclick="login()">
-        Login
-    </button>
+<p>
+Together, let's build a cleaner,
+greener and smarter future.
+</p>
 
 </div>
+
+<div class="login-box">
+
+<h2>Login Portal</h2>
+
+<input
+type="text"
+id="username"
+placeholder="Enter Username">
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<select id="role">
+
+<option value="resident">
+Resident
+</option>
+
+<option value="admin">
+Admin
+</option>
+
+<option value="collector">
+Collector
+</option>
+
+</select>
+
+<button onclick="login()">
+Login
+</button>
+
+
+
 
 <script>
 
@@ -153,30 +265,30 @@ document.getElementById("role").value;
 
 if(role === "admin"){
 
-    if(
+if(
 
-    (username === "Amar Patil" &&
-    password === "12345678")
+(username === "Amar Patil" &&
+password === "12345678")
 
-    ||
+||
 
-    (username === "Ravi Kumar" &&
-    password === "admin123")
+(username === "Ravi Kumar" &&
+password === "admin123")
 
-    ){
+){
 
-        window.location.href =
-        "admin.html";
+window.location.href =
+"admin.html";
 
-    }
+}
 
-    else{
+else{
 
-        alert(
-        "Invalid Admin Username or Password"
-        );
+alert(
+"Invalid Admin Credentials"
+);
 
-    }
+}
 
 }
 
@@ -185,30 +297,30 @@ if(role === "admin"){
 
 else if(role === "collector"){
 
-    if(
+if(
 
-    (username === "Suresh" &&
-    password === "collect123")
+(username === "Suresh" &&
+password === "collect123")
 
-    ||
+||
 
-    (username === "Mahesh" &&
-    password === "pickup123")
+(username === "Mahesh" &&
+password === "pickup123")
 
-    ){
+){
 
-        window.location.href =
-        "collector.html";
+window.location.href =
+"collector.html";
 
-    }
+}
 
-    else{
+else{
 
-        alert(
-        "Invalid Collector Username or Password"
-        );
+alert(
+"Invalid Collector Credentials"
+);
 
-    }
+}
 
 }
 
@@ -217,30 +329,30 @@ else if(role === "collector"){
 
 else{
 
-    if(
+if(
 
-    (username === "Rahul" &&
-    password === "user123")
+(username === "Rahul" &&
+password === "user123")
 
-    ||
+||
 
-    (username === "Priya" &&
-    password === "resident123")
+(username === "Priya" &&
+password === "resident123")
 
-    ){
+){
 
-        window.location.href =
-        "index.html";
+window.location.href =
+"index.html";
 
-    }
+}
 
-    else{
+else{
 
-        alert(
-        "Invalid Resident Username or Password"
-        );
+alert(
+"Invalid Resident Credentials"
+);
 
-    }
+}
 
 }
 
