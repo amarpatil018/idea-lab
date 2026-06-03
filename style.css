@@ -399,3 +399,12 @@ width:90%;
 width:90%;
 
 }}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #1b5e20,
+    #4caf50,
+    #a5d6a7
+  );
+}
